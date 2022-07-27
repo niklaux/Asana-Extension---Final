@@ -1,0 +1,33 @@
+{
+    "name": "Asana Extension",
+    "description": "An extension that adds the total number of hours assigned to a developer!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["storage", "tabs", "activeTab"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/get_started16.png",
+            "18": "/images/get_started18.png",
+            "48": "/images/get_started48.png",
+            "128": "/images/get_started128.png"
+        }
+    },
+        "icons": {
+            "16": "/images/get_started16.png",
+            "18": "/images/get_started18.png",
+            "48": "/images/get_started48.png",
+            "128": "/images/get_started128.png"
+        },
+    "content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+            "run_at": "document_idle",
+			"js": ["jquery.js", "content.js"],
+            "css": ["style1.css"]
+		}
+	]   
+}

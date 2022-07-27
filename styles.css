@@ -1,0 +1,12 @@
+.list-group {
+    min-width: 300px;
+    margin: 20px;
+}
+
+html body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+h5 {
+    text-align: center;
+}
